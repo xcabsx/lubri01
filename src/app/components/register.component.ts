@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
+import { User} from '../models/user';
 
 @Component({
   selector: 'register',
@@ -8,12 +9,23 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
 
 export class RegisterComponent implements OnInit {
   public title: string;
+  public user: User;
 
   constructor(
-    // private _route: ActivatedRoute,
-    //private _router: Router
+   private _route: ActivatedRoute,
+    private _router: Router
   ) {
-    this.title = 'componente de Registrar';
+    this.title = 'Registro';
+    this.user = new User(1, 'user', '', '', '', '');
+    /*this.user = {
+      id: null ,
+      name: '',
+      email: '',
+      role: '',
+      surname: '',
+      password: ''
+    };*/
+
 
   };
 
@@ -21,5 +33,8 @@ export class RegisterComponent implements OnInit {
     console.log('el componente ha sido cargado correctamente');
 
   };
+  onSubmit() {
+    console.log(this.user);
+  }
 
 }
