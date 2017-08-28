@@ -1,0 +1,33 @@
+<h3>{{titulo}}</h3>
+<hr />
+
+<div *ngIf="productos">
+	<div class="row">
+		<div class="col-lg-3"  *ngFor=" let pepe of productos">
+			<div class="thumbnail">
+				<div *ngIf="pepe.imagen" class="imagen-container">
+					<img src="http://localhost/cursoangular4-back/uploads/{{pepe.imagen}}" class="producto_imagen" />
+				</div>
+
+				<div *ngIf="!pepe.imagen">
+					<div class="imagen_relleno"> </div>
+				</div>
+				<div class="caption">
+					<h3> {{pepe.descripcion}} </h3>
+					<p>{{pepe.precio}} $ </p>
+					<div class="botones" *ngIf="confirmado != pepe.id">
+						<a [routerLink]="['/producto',pepe.id]" class="btn btn-success btn-md " >Ver</a>
+						<a [routerLink]="['/editar-producto',pepe.id]"  class="btn btn-warning btn-md">Editar</a>
+						<a (click)="borrarConfirm(pepe.id)" class="btn btn-danger btn-md">Borrar</a>
+
+					</div>
+					<div class="seguro" *ngIf="confirmado == pepe.id">
+						<a  (click)="cancelarConfirm()" class="btn btn-warning btn-sm">Cancelar</a>
+						<a (click)="onDeleteProducto(pepe.id)" class="btn btn-primary btn-sm">Eliminar</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
