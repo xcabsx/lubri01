@@ -44,6 +44,23 @@ export class UserService {
     }
     return this.token;
   }
+  /*register(user_to_register) {
+    const json = JSON.stringify(user_to_register);
+    const params = 'json=' + json;
+    const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
+
+    return this._http.post(this.url + '/user/new', params , {headers : headers})
+      .map(res => res.json());
+  }*/
+
+  register2(user_to_register) {
+    const json = JSON.stringify(user_to_register);
+    const params = 'json=' + json;
+    const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
+
+    return this._http.post(this.url + '/user/new', params , {headers : headers})
+      .map(res => res.json());
+  }
 }
 
 
