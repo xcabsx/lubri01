@@ -1,11 +1,11 @@
-import{ Component } from '@angular/core';
+import{ Component, OnInit } from '@angular/core';
 
 @Component({
 	selector:'home',
 	templateUrl: '../views/home.html'
-})	
+})
 
-export class HomeComponent{
+export class HomeComponent {
 	public titulo:string;
 
 		constructor(){
@@ -17,4 +17,4 @@ export class HomeComponent{
 			console.log('Se ha cargado el componente home');
 		}
 
-	};	
+	};

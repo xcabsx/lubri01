@@ -15,11 +15,11 @@ export class DefaultComponent implements OnInit {
   ) {
     this.title = 'Home Page';
 
-  };
+  }
 
   public ngOnInit() {
     console.log('el componente ha sido cargado correctamente');
 
-  };
+  }
 
 }

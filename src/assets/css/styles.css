@@ -7,3 +7,60 @@
 }
 
 
+.activado{
+  text-decoration: none !important;
+
+  border-bottom: 4px solid yellow !important;
+}
+
+#footer{
+  padding-top: 10px;
+  margin-top:30px;
+  border-top:1px solid #eee;
+  color:gray;
+
+}
+
+#content{
+  padding: 0px;
+  margin-top: 30px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0px 2px 5px #ccc;
+  overflow: hidden;
+}
+
+#main .jumbotron{
+  padding: 50px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#formProducto label{
+  margin-top: 10px
+}
+
+.producto_imagen{
+  /*width: 100%;*/
+  max-height: 200px;
+  margin: 0px auto;
+  display: block;
+  max-width: 100%;
+
+}
+
+.imagen_relleno{
+  background: #ccc;
+
+  height: 200px
+
+}
+
+.imagen-container{
+  width: 100%;
+  overflow: hidden;
+
+}
+
+
+

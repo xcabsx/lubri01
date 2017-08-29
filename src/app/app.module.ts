@@ -15,6 +15,7 @@ import { ProductoEditComponent} from './components/producto-edit.component';
 import {ProductoAddComponent} from './components/productos-add.component';
 import { ProductosListComponent} from './components/productos-list.component';
 import { ProductoDetailComponent} from './components/producto-detail.component';
+import { HomeComponent} from './components/home.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProductoDetailComponent} from './components/producto-detail.component';
     ProductoEditComponent,
     ProductoAddComponent,
     ProductosListComponent,
-    ProductoDetailComponent
+    ProductoDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

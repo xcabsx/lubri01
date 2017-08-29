@@ -10,10 +10,11 @@ import {ProductosListComponent} from './components/productos-list.component';
 import { ProductoAddComponent} from './components/productos-add.component';
 import { ProductoDetailComponent} from './components/producto-detail.component';
 import { ProductoEditComponent} from './components/producto-edit.component';
+import {HomeComponent} from './components/home.component';
 
-const appRoutes: Routes =[
-  {path: '' , component: DefaultComponent},
-  {path: 'home' , component: DefaultComponent},
+const appRoutes: Routes = [
+  {path: '' , component: HomeComponent},
+  {path: 'home' , component: HomeComponent},
   {path: 'login' , component: LoginComponent},
   {path: 'login/:id' , component: LoginComponent},
   {path: 'register' , component: RegisterComponent},
