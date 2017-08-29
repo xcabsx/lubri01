@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { ProductoService } from '../services/producto.service';
 import { Producto } from '../models/producto';
-import { GLOBAL } from '../services/global';
+import { GLOBAL } from '../services/GLOBAL';
 
 @Component({
 	selector: 'producto-add',
@@ -11,7 +11,7 @@ import { GLOBAL } from '../services/global';
 	providers: [ProductoService]
 })
 export class ProductoAddComponent{
-	public titulo:string; 
+	public titulo:string;
 	public producto:Producto;
 	public filesToUpload;
 	public resultUpload;
@@ -48,7 +48,7 @@ export class ProductoAddComponent{
 				this.saveProducto();
 			}
 
-		
+
 	}
 
 
@@ -56,7 +56,7 @@ export class ProductoAddComponent{
 	fileChangeEvent(fileInput:any){
 		this.filesToUpload = <Array<File>>fileInput.target.files;
 		console.log(this.filesToUpload);
-		
+
 	}
 
 	saveProducto(){

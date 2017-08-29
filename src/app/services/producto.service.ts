@@ -3,7 +3,7 @@ import {Http, Response, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable} from 'rxjs/Observable';
 import { Producto } from '../models/producto';
-import { GLOBAL} from './global';
+import { GLOBAL} from './GLOBAL';
 
 @Injectable()
 export class ProductoService {

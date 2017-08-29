@@ -1,4 +1,3 @@
-
 #header{
 	background: #E03137;
 	color : white;
@@ -7,52 +6,9 @@
 	line-height: 90px;
 }
 
-
-
-#header h1{
-	line-height: 50px;
-	display: block;
-	font-weight: bold;
-	font-size: 30px;
-
-}
-
-#nav ul{
-	list-style: none;
-	margin: 0px;
-	padding-left: 20px;
-}
-
-#nav ul li{
-	float: left;
-	margin-right: 20px;
-}
-
-#nav {
-	margin: 0px;
-	padding: 0px;
-	background: rgba(224,59,55,0.67);
-
-}
-
-#nav ul li a{
-	display: block;
-	color: white;
-	height: 30px;
-	line-height: 29px;
-	padding-left: 10px;
-	padding-right: 10px;
-	transition: all 300ms;
-}
-
-#nav ul li a:hover{
-	text-decoration: none;
-	background: #E03137;
-}
-
 .activado{
 	text-decoration: none !important;
-	
+
 	border-bottom: 4px solid yellow !important;
 }
 
@@ -61,7 +17,7 @@
 	margin-top:30px;
 	border-top:1px solid #eee;
 	color:gray;
-	
+
 }
 
 #content{
@@ -94,7 +50,7 @@
 
 .imagen_relleno{
 	background: #ccc;
-	
+
 	height: 200px
 
 }

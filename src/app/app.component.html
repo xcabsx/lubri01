@@ -25,7 +25,7 @@
           </a>
         </li>
         <li>
-          <a [routerLink]="['/user-edit']" *ngIf="identity && identity.sub" >
+          <a [routerLink]="['/']" *ngIf="identity && identity.sub" >
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             Crear Tarea
           </a>
@@ -46,7 +46,7 @@
        </ul>
       <ul class="nav navbar-nav navbar-right" *ngIf="identity">
         <li>
-          <a [routerLink]="['/']" *ngIf="identity && identity.sub">
+          <a [routerLink]="['/user-edit']" *ngIf="identity && identity.sub">
             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
             Ajustes
           </a>
