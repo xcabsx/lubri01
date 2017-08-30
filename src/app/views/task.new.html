@@ -1,0 +1,28 @@
+<div class="col-md-12">
+<h3>{{titulo}}</h3>
+
+  <form #taskNewForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7 no-padding">
+    <p>
+      <label>Titulo</label>
+      <input type="text" class="form-control" name="title" #title="ngModel" [(ngModel)]="task.title"  required />
+      <span *ngIf="!title.valid && title.touched">Debe llenar el titulo</span>
+    </p>
+    <p>
+      <label>Descripcion</label>
+      <textarea class="form-control" name="description" #description="ngModel" [(ngModel)]="task.description" ></textarea>
+      <span *ngIf="!description.valid && description.touched">Debe llenar la descripcion</span>
+    </p>
+    <p>
+      <label>Estado</label>
+     <select class="form-control"  name="status" #status="ngModel" [(ngModel)]="task.status">
+       <option value="new">Nueva</option>
+       <option value="todo">Para hacer</option>
+       <option value="finished">Terminada</option>
+
+     </select>
+    </p>
+    <input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!taskNewForm.form.valid">
+  </form>
+
+</div>
+

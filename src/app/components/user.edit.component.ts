@@ -42,7 +42,23 @@ export class UserEditComponent implements OnInit{
         );
     }
   }
-  onSubmit(){
+  onSubmit() {
+    this._userService.update_user(this.user).subscribe(
+      response => {
+        this.status = response.status;
+
+        if (this.status != 'success') {
+          this.status = 'error';
+        }else {
+          console.log('va a localstorrage');
+          localStorage.setItem('identity', JSON.stringify(this.user));
+          // como ya esta actualizado en la bd .. reemplaza el usuario del local storage
+
+        }
+
+      }, error => {
+        console.log(<any>error);
+      } );
     console.log(this.user);
   }
 }

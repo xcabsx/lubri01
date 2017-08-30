@@ -16,6 +16,7 @@ import {ProductoAddComponent} from './components/productos-add.component';
 import { ProductosListComponent} from './components/productos-list.component';
 import { ProductoDetailComponent} from './components/producto-detail.component';
 import { HomeComponent} from './components/home.component';
+import { TaskNewComponent} from './components/task.new.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HomeComponent} from './components/home.component';
     ProductoAddComponent,
     ProductosListComponent,
     ProductoDetailComponent,
-    HomeComponent
+    HomeComponent,
+    TaskNewComponent
   ],
   imports: [
     BrowserModule,

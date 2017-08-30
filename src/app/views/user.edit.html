@@ -1,5 +1,11 @@
 {{title}}
 <div class="col-md-12">
+  <div class="alert alert-success" *ngIf="status=='success'">
+    Se han guardado los cambios!!! Logeate desde <a [routerLink]="['/login']">aqui!</a>.
+  </div>
+  <div class="alert alert-danger" *ngIf="status=='Error'">
+    Error al Modificar los datos del usuario!
+  </div>
 
   <form #updateForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7 no-padding">
     <p>

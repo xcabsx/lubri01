@@ -11,7 +11,7 @@ export class ProductoService {
 
 	constructor(
 		public _http: Http
-	){
+	) {
 		this.url = GLOBAL.url2;
 
 	}
@@ -19,7 +19,7 @@ export class ProductoService {
 	getProductos(){
 		return this._http.get(this.url+'productos').map(res => res.json());
 	}
-	getProducto(id){
+	getProducto(id) {
 		return this._http.get(this.url+'producto/'+id).map(res => res.json());
 
 	}
@@ -52,8 +52,8 @@ deleteProducto(id){
 
 	makeFileRequest(url:string, params: Array<string>, files:Array<File>){
 		return new Promise((resolve, reject)=>{
-			var formData:any = new FormData();
-			var xhr = new XMLHttpRequest();
+			const formData: any = new FormData();
+			const xhr = new XMLHttpRequest();
 
 			for(var i = 0 ;i < files.length; i++){
 				formData.append('uploads[]',files[i],files[i].name);

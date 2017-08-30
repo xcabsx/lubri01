@@ -11,6 +11,7 @@ import { ProductoAddComponent} from './components/productos-add.component';
 import { ProductoDetailComponent} from './components/producto-detail.component';
 import { ProductoEditComponent} from './components/producto-edit.component';
 import {HomeComponent} from './components/home.component';
+import { TaskNewComponent} from './components/task.new.component';
 
 const appRoutes: Routes = [
   {path: '' , component: HomeComponent},
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   {path: 'productos-add', component: ProductoAddComponent},
   {path: 'producto/:id', component: ProductoDetailComponent},
   {path: 'editar-producto/:id', component: ProductoEditComponent},
+  {path: 'new-task', component: TaskNewComponent},
   {path: '**' , component: LoginComponent}
 ];
 
