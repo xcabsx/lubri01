@@ -12,9 +12,12 @@ import { ProductoDetailComponent} from './components/producto-detail.component';
 import { ProductoEditComponent} from './components/producto-edit.component';
 import {HomeComponent} from './components/home.component';
 import { TaskNewComponent} from './components/task.new.component';
+import { TaskDetailComponent} from './components/task.detail.component';
 
 const appRoutes: Routes = [
   {path: '' , component: HomeComponent},
+  {path: 'index' , component: DefaultComponent},
+  {path: 'index/:page' , component: DefaultComponent},
   {path: 'home' , component: HomeComponent},
   {path: 'login' , component: LoginComponent},
   {path: 'login/:id' , component: LoginComponent},
@@ -25,6 +28,7 @@ const appRoutes: Routes = [
   {path: 'producto/:id', component: ProductoDetailComponent},
   {path: 'editar-producto/:id', component: ProductoEditComponent},
   {path: 'new-task', component: TaskNewComponent},
+  {path: 'task/:id', component: TaskDetailComponent},
   {path: '**' , component: LoginComponent}
 ];
 

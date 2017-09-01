@@ -17,6 +17,7 @@ import { ProductosListComponent} from './components/productos-list.component';
 import { ProductoDetailComponent} from './components/producto-detail.component';
 import { HomeComponent} from './components/home.component';
 import { TaskNewComponent} from './components/task.new.component';
+import { TaskDetailComponent} from './components/task.detail.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TaskNewComponent} from './components/task.new.component';
     ProductosListComponent,
     ProductoDetailComponent,
     HomeComponent,
-    TaskNewComponent
+    TaskNewComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule,

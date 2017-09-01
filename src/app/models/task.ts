@@ -6,6 +6,6 @@ export class Task {
     public  status: String,
     public  createdAt,
     public  updatedAt,
-    public user_id: String
+    public user
     ) { }
 }

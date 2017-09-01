@@ -1,2 +1,60 @@
-<h1>{{title}}</h1>
-Home Page
+
+
+<div class="col-md-12">
+  <div class="alert alert warning" *ngIf="!identity || identity==null">
+    Inicia sesion
+  </div>
+
+  <div class="" *ngIf="identity || identity.sub">
+   <!--buscador -->
+    <div class="all-taks">
+      <div class="loader" *ngIf="loading=='Show'">
+      <img src="assets/images/loader.gif"  />
+      cargando
+      </div>
+
+      <table class="table table-hover table-stipped" id="tasks-list" *ngIf="tasks && tasks.length >= 1">
+        <tr>
+          <th>Estado</th>
+          <th>Titulo</th>
+          <th>Acciones</th>
+        </tr>
+        <tr *ngFor="let task of tasks" class="task-item">
+          <td>
+            <h4>
+              <span class="label label-lg label-success" *ngIf="task.status == 'finished'"> Finalizada </span>
+              <span class="label label-lg label-warning" *ngIf="task.status == 'todo'"> Pendiente </span>
+              <span class="label label-lg label-primary" *ngIf="task.status == 'new'"> Nueva </span>
+
+            </h4>
+          </td>
+          <td>
+            <h4>
+              <a [routerLink]="['/task',task.id]">{{task.title}}</a>
+            </h4>
+          </td>
+          <td><a href="" class="btn btn-warning">Editar</a> </td>
+        </tr>
+
+      </table>
+      <ul class="pagination" *ngIf="tasks && tasks.length >= 1" >
+        <li>
+          <a [routerLink]="['/index',pagePrev]" aria-label="Previa">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li *ngFor="let page of pages">
+          <a [routerLink]="['/index',page+1]">{{page+1}}</a>
+        </li>
+        <li>
+          <a [routerLink]="['/index',pageNext]" aria-label="Siguiente">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+</div>
