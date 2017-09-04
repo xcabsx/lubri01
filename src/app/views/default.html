@@ -7,11 +7,38 @@
 
   <div class="" *ngIf="identity || identity.sub">
    <!--buscador -->
+   <form class="col-md-12" role="search">
+     <div class="form-group col-lg-6">
+       <label>    Mostrar Solo     </label>
+       <select class="form-control" name="filter" [(ngModel)]="filter">
+         <option value="0" selected="selected">Sin filtro</option>
+         <option value="1" >Nuevas</option>
+         <option value="2" >Para Hacer</option>
+         <option value="3" >Terminadas</option>
+       </select>
+     </div>
+     <div class="form-group col-lg-6">
+       <label>    Orden Por     </label>
+       <select class="form-control" name="order" [(ngModel)]="order">
+         <option value="0" selected="selected">Por defecto</option>
+         <option value="1" >Fecha ascendente</option>
+         <option value="2" >Fecha descendente</option>
+       </select>
+     </div>
+     <div class="clearfix"> </div>
+     <div class="form-group col-lg-10">
+       <input type="text" class="form-control" placeholder="Que tarea Buscas" name="searchString" [(ngModel)]="searchString"/>
+     </div>
+     <div class="col-lg-2"><button type="submit" class="btn btn-default" (click)="search();">
+       <span class="glyphicon glyphicon-search" aria-hidden="true"></span>Buscar
+     </button></div>
+   </form>
+
     <div class="all-taks">
       <div class="loader" *ngIf="loading=='Show'">
-      <img src="assets/images/loader.gif"  />
+      <img src="assets/images/loader.gif"/>
       cargando
-      </div>
+    </div>
 
       <table class="table table-hover table-stipped" id="tasks-list" *ngIf="tasks && tasks.length >= 1">
         <tr>
@@ -19,7 +46,7 @@
           <th>Titulo</th>
           <th>Acciones</th>
         </tr>
-        <tr *ngFor="let task of tasks" class="task-item">
+        <tr *ngFor="let task of tasks" class="task-item" [routerLink]="['/task',task.id]">
           <td>
             <h4>
               <span class="label label-lg label-success" *ngIf="task.status == 'finished'"> Finalizada </span>
@@ -30,14 +57,20 @@
           </td>
           <td>
             <h4>
-              <a [routerLink]="['/task',task.id]">{{task.title}}</a>
+              {{task.title}}
             </h4>
           </td>
           <td><a href="" class="btn btn-warning">Editar</a> </td>
         </tr>
 
       </table>
-      <ul class="pagination" *ngIf="tasks && tasks.length >= 1" >
+      <div class="col-md-12" *ngIf="loading == 'hide' && (!tasks || tasks.length == 0)">
+        <div class="clearfix"></div>
+      <div class="alert alert-warning"  >
+        No se han encontrado tareas, crealas desde <a [routerLink]="['/new-task']"> aqui </a>
+      </div>
+      </div>
+      <ul class="pagination" *ngIf="tasks && tasks.length >= 1 && !searchString && order==0 && filter==0" >
         <li>
           <a [routerLink]="['/index',pagePrev]" aria-label="Previa">
             <span aria-hidden="true">&laquo;</span>

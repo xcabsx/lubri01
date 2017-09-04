@@ -85,5 +85,30 @@ export class DefaultComponent implements OnInit {
     });
 
   }
+  // filtro
+ public filter = 0;
+ public order = 0;
+ public searchString;
+ search() {
+  console.log(this.filter);
+  console.log(this.searchString);
+  console.log(this.order);
+  this.loading = 'show';
+  if (!this.searchString || this.searchString.trim().length == 0) {
+    this.searchString = null;
+  }
+  this._taskServices.search(this.token,this.searchString, this.filter, this.order).subscribe(
+    response => {
+      if (response.status == 'success'){
+        this.tasks = response.data;
+        this.loading = 'hide';
+      }else {
+        this._router.navigate(['/index']);
+      }
+    }, error => {
+      console.log(<any>error);
+    }
+  );
+}
 
 }

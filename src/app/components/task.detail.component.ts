@@ -14,6 +14,7 @@ export class TaskDetailComponent implements OnInit{
   public identity;
   public token;
   public task: Task;
+  public loading;
 
   constructor(
     private _userService: UserService,
@@ -35,6 +36,7 @@ export class TaskDetailComponent implements OnInit{
     }
   }
   getTask() {
+    this.loading = 'show';
     this._route.params.forEach((params: Params) => {
       const id = +params['id'];
       this._taskService.getTask(this.token, id).subscribe(
@@ -44,6 +46,7 @@ export class TaskDetailComponent implements OnInit{
             if (response.data.user.id == this.identity.sub) {
               // podemos ver la tarea
               this.task = response.data;
+              this.loading = 'hide';
 
             }else{
               // redirigir home
@@ -55,11 +58,25 @@ export class TaskDetailComponent implements OnInit{
             this._router.navigate(['/login']);
           }
 
-        },error => {
-          console.log(<any>error)
+        }, error => {
+          console.log(<any>error);
         }
       );
     });
+  }
+  deleteTask(id) {
+    this._taskService.deleteTask(this.token, id).subscribe(
+      response => {
+        if ( response.status == 'success') {
+          this._router.navigate(['/']);
+        }else {
+          alert('No se ha podido Borrar');
+
+        }
+      }, error => {
+        console.log(<any>error);
+      }
+    );
   }
 }
 

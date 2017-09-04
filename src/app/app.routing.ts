@@ -15,7 +15,7 @@ import { TaskNewComponent} from './components/task.new.component';
 import { TaskDetailComponent} from './components/task.detail.component';
 
 const appRoutes: Routes = [
-  {path: '' , component: HomeComponent},
+  {path: '' , component: DefaultComponent},
   {path: 'index' , component: DefaultComponent},
   {path: 'index/:page' , component: DefaultComponent},
   {path: 'home' , component: HomeComponent},

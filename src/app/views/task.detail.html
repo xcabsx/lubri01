@@ -1,5 +1,46 @@
 <div class="col-md-12">
-  <h3>detalle de tarea</h3>
+  <div class="loader" *ngIf="loading=='show'">
+    <img src="assets/images/loader.gif" />
+
+  </div>
+
+  <div class="col-md-12" *ngIf="task">
+    <h3>{{task.title}}</h3>
+    <hr/>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Tarea Creada Por <strong>{{task.user.name + ' ' + task.user.surname}}</strong> el {{task.createdAt.timestamp}}
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{task.description}}
+      </div>
+    </div>
+    <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal">
+      Borrar
+    </a>
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              &times;
+            </button>
+            <h4 class="modal-title"> Confirmaci&oacute;n</h4>
+          </div>
+          <div class="modal-body">
+            <p> Quieres borrar la Tarea? </p>
+            <p class="text-warning"><small>No se podra volver a recuperar!</small></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteTask(task.id)">Borrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-{{task.title}}
+

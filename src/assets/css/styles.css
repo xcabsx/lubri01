@@ -62,5 +62,21 @@
 
 }
 
+.loader img{
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 15px;
 
+}
+.task-item  {
+  cursor: pointer;
+}
+#tasks-list tr{
+  cursor: pointer;
+
+}
+.btn-search{
+  padding: 6px 7px ;
+}
 

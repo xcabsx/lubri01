@@ -36,5 +36,24 @@ export class TaskService{
     const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
     return this._http.post(this.url + '/task/detail/' + id, params , {headers: headers}).map(res => res.json());
   }
+  search(token,search = null, filter = null, order =  null) {
+    const params = 'authorization='+token+'&filter='+filter+'&order='+order;
+    const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
+    let url:string;
+    if ( search == null) {
+      url = this.url + '/task/search';
+    }else {
+      url = this.url + '/task/search/' + search;
+    }
+
+    return this._http.post(url , params , {headers: headers}).map(res => res.json());
+
+
+  }
+  deleteTask(token, id) {
+    const params = 'authorization=' + token;
+    const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
+    return this._http.post(this.url + '/task/remove/' + id, params , {headers: headers}).map(res => res.json());
+  }
 
 }
