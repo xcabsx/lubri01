@@ -1,4 +1,8 @@
 <div class="col-md-12">
+  <div class="loader" *ngIf="loading=='show'">
+    <img src="assets/images/loader.gif" />
+  </div>
+  <div class="col-md-12" *ngIf="!loading || task ">
 <h3>{{titulo}}</h3>
   <div class="alert alert-success" *ngIf="status_task == 'success' ">
     Se han guardado la tarea!!!  <a [routerLink]="['/login']">aqui!</a>.
@@ -31,4 +35,4 @@
   </form>
 
 </div>
-
+</div>

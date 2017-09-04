@@ -55,5 +55,12 @@ export class TaskService{
     const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
     return this._http.post(this.url + '/task/remove/' + id, params , {headers: headers}).map(res => res.json());
   }
+  update(token, task, id) {
+    const json = JSON.stringify(task);
+    const params = 'json=' + json + '&authorization=' + token;
+    const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
+    return this._http.post(this.url + '/task/edit/' + id, params , {headers: headers}).map(res => res.json());
+
+  }
 
 }

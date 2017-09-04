@@ -60,7 +60,7 @@
               {{task.title}}
             </h4>
           </td>
-          <td><a href="" class="btn btn-warning">Editar</a> </td>
+          <td><a [routerLink]="['/task-edit',task.id]" class="btn btn-warning">Editar</a> </td>
         </tr>
 
       </table>

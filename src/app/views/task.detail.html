@@ -10,7 +10,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          Tarea Creada Por <strong>{{task.user.name + ' ' + task.user.surname}}</strong> el {{task.createdAt.timestamp}}
+          Tarea Creada Por <strong>{{task.user.name + ' ' + task.user.surname}}</strong> el {{task.createdAt.timestamp | generateDate}}
         </h3>
       </div>
       <div class="panel-body">

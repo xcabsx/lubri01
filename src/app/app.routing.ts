@@ -13,6 +13,9 @@ import { ProductoEditComponent} from './components/producto-edit.component';
 import {HomeComponent} from './components/home.component';
 import { TaskNewComponent} from './components/task.new.component';
 import { TaskDetailComponent} from './components/task.detail.component';
+import { TaskEditComponent} from './components/task.edit.component';
+// mean stack
+import { TiendaComponent} from './components/tienda/tienda.component';
 
 const appRoutes: Routes = [
   {path: '' , component: DefaultComponent},
@@ -29,6 +32,8 @@ const appRoutes: Routes = [
   {path: 'editar-producto/:id', component: ProductoEditComponent},
   {path: 'new-task', component: TaskNewComponent},
   {path: 'task/:id', component: TaskDetailComponent},
+  {path: 'task-edit/:id', component: TaskEditComponent},
+  {path: 'tienda', component: TiendaComponent},
   {path: '**' , component: LoginComponent}
 ];
 
