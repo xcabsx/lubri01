@@ -15,6 +15,7 @@ export class TaskNewComponent implements OnInit {
   public task: Task;
   public token;
   public status_task: String;
+  public loading;
 
   constructor(
     private _userService : UserService,

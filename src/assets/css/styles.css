@@ -12,6 +12,9 @@
 
   border-bottom: 4px solid yellow !important;
 }
+.active{
+
+}
 
 #footer{
   padding-top: 10px;
@@ -34,6 +37,9 @@
   padding: 50px;
   margin-top: 30px;
   border-radius: 10px;
+}
+.jumbotron{
+  box-shadow: 2px 2px 1px grey;
 }
 
 #formProducto label{
@@ -78,5 +84,8 @@
 }
 .btn-search{
   padding: 6px 7px ;
+}
+.navbar-nav .active{
+  border-bottom: 3px solid orange;
 }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { UserService} from './services/user.service';
 
 @Component({
@@ -7,10 +7,11 @@ import { UserService} from './services/user.service';
   styleUrls: ['./app.component.css'],
   providers: [ UserService ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, DoCheck {
   title = 'app';
   public identity;
   public token;
+  public emailContacto;
 
   constructor( private _userService: UserService ) {
     this.token = this._userService.getToken2();
@@ -19,5 +20,12 @@ export class AppComponent implements OnInit {
      }
 
   ngOnInit() {
+    //this.emailContacto = localStorage.getItem('email');
+  }
+  ngDoCheck() {
+    this.emailContacto = localStorage.getItem('email');
+  }
+  borrarEmail() {
+    localStorage.removeItem('email');
   }
 }

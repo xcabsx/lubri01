@@ -5,6 +5,9 @@ import { FormsModule} from '@angular/forms';
 
 import { routing, appRoutingProviders} from './app.routing';
 
+// importar modulo
+
+import { ModuloemailModule} from './modules/moduloemail/moduloemail.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login.component';
@@ -20,9 +23,25 @@ import { TaskNewComponent} from './components/task.new.component';
 import { TaskDetailComponent} from './components/task.detail.component';
 import { TaskEditComponent} from './components/task.edit.component';
 import { generateDatePipe } from './pipes/generate.date.pipe';
+import { ErrorComponent} from './components/error.component';
 
 //componentes de curso mean stack
 import { TiendaComponent} from './components/tienda/tienda.component';
+import { ParquesComponent} from './components/parques/parques.component';
+import { Home2Component} from "./components/home/home.component";
+import { AnimalsComponent } from './components/animals/animals.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { KeeperComponent } from './components/keepers/keeper.component';
+import { GuardarEmailComponent} from './modules/moduloemail/components/guardar-email/guardar.email.component';
+import { MostrarEmailComponent} from './modules/moduloemail/components/mostrar-email/mostrar.email.component';
+import { MainEmailComponent} from './modules/moduloemail/components/main-email/main.email.component';
+// para probar wordpress
+import { PostListComponent } from './posts/post-list/post-list.component';
+import { FutbolComponent } from './components/futbol/futbol.component';
+import { SimpleTinyComponent } from './components/simple-tiny/simple-tiny.component';
+import { MenuSuperiorComponent } from './components/menu-superior/menu-superior.component';
+import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-superior-tareas/menu-superior-tareas.component';
+
 
 
 @NgModule({
@@ -41,13 +60,25 @@ import { TiendaComponent} from './components/tienda/tienda.component';
     TaskDetailComponent,
     TaskEditComponent,
     generateDatePipe,
-    TiendaComponent
+    TiendaComponent,
+    PostListComponent,
+    ErrorComponent,
+    ParquesComponent,
+    FutbolComponent,
+    AnimalsComponent,
+    ContactComponent,
+    KeeperComponent,
+    Home2Component,
+    SimpleTinyComponent,
+    MenuSuperiorComponent,
+    MenuSuperiorTareasComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    routing
+    routing,
+    ModuloemailModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

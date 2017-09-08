@@ -19,14 +19,14 @@
 	<input #precio="ngModel" name="precio" [(ngModel)]="producto.precio" type="text" class="form-control" required pattern="[0-9]+" />
 
 	<label>Imagen</label>
-	<div *ngIf="is_edit"> 
+	<div >
 	<img src="http://localhost/cursoangular4-back/uploads/{{producto.imagen}}" width="60px" />
 	</div>
 	<input  name="imagen"  type="file" class="form-control" (change)="fileChangeEvent($event)" />
 
 
 	<br/>
-	<input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!formProducto.form.valid" /> 
-	
+	<input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!formProducto.form.valid" />
+
 
 </form>

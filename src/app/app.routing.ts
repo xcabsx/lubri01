@@ -13,9 +13,15 @@ import { ProductoEditComponent} from './components/producto-edit.component';
 import {HomeComponent} from './components/home.component';
 import { TaskNewComponent} from './components/task.new.component';
 import { TaskDetailComponent} from './components/task.detail.component';
-import { TaskEditComponent} from './components/task.edit.component';
-// mean stack
-import { TiendaComponent} from './components/tienda/tienda.component';
+import { TaskEditComponent} from './components/task.edit.component';// mean stack
+import { Home2Component} from './components/home/home.component';
+import { AnimalsComponent } from './components/animals/animals.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { KeeperComponent } from './components/keepers/keeper.component';
+import { TiendaComponent} from "./components/tienda/tienda.component";
+
+//app de futbol
+import { FutbolComponent} from './components/futbol/futbol.component';
 
 const appRoutes: Routes = [
   {path: '' , component: DefaultComponent},
@@ -33,7 +39,15 @@ const appRoutes: Routes = [
   {path: 'new-task', component: TaskNewComponent},
   {path: 'task/:id', component: TaskDetailComponent},
   {path: 'task-edit/:id', component: TaskEditComponent},
+  {path: 'contacto', component: ContactComponent},
+  {path: 'animals', component: AnimalsComponent},
+  {path: 'keepers', component: KeeperComponent},
+  {path: 'inicio', component: Home2Component},
+
   {path: 'tienda', component: TiendaComponent},
+  //{path: 'parques', component: ParquesComponent},
+  //{path: 'futbol', component: FutbolComponent},
+
   {path: '**' , component: LoginComponent}
 ];
 

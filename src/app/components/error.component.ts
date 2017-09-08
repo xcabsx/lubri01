@@ -1,4 +1,4 @@
-import{ Component } from '@angular/core';
+import{ Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'error',
@@ -7,10 +7,10 @@ import{ Component } from '@angular/core';
 
 	})
 
-export class ErrorComponent {
+export class ErrorComponent implements OnInit{
 	public titulo:string;
 
-	contructor(){
+	contructor() {
 		this.titulo = 'Error .página no encontrada.'
 	}
 

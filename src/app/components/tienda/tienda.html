@@ -1,1 +1,23 @@
 <h1>{{title}}</h1>
+<h4> jquery dentro</h4>
+<button id="botonjq">mostrar Textos </button>
+<p id="texto" class="hidden">asdasdasdasdasdasdasdasdasdasd</p>
+<hr />
+<p>
+Nombre del parque:
+<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()"/>
+</p>
+<p>
+  nombre del parque : {{nombreDelParque}}
+</p>
+  <br />
+<p *ngIf="nombreDelParque">
+<parques [nombre]="nombreDelParque"
+         [metros]="metros"
+(pasameLosDatos)="verDatosParque($event)">
+</parques>
+</p>
+<hr />
+<app-simple-tiny [elementId]="'descripcionTienda'"
+  (onEditorKeyup)="textoRichEditor($event)">
+</app-simple-tiny>
