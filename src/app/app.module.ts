@@ -8,6 +8,7 @@ import { routing, appRoutingProviders} from './app.routing';
 // importar modulo
 
 import { ModuloemailModule} from './modules/moduloemail/moduloemail.module';
+import { AdminModule} from "./modules/admin/admin.module";
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login.component';
@@ -41,6 +42,7 @@ import { FutbolComponent } from './components/futbol/futbol.component';
 import { SimpleTinyComponent } from './components/simple-tiny/simple-tiny.component';
 import { MenuSuperiorComponent } from './components/menu-superior/menu-superior.component';
 import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-superior-tareas/menu-superior-tareas.component';
+
 
 
 
@@ -78,7 +80,8 @@ import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-sup
     HttpModule,
     FormsModule,
     routing,
-    ModuloemailModule
+    ModuloemailModule,
+    AdminModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
