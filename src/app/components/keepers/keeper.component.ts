@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { fundido} from '../../modules/admin/animation';
 
 @Component({
   selector: 'app-keepers',
   templateUrl: './keeper.component.html',
-  styleUrls: ['./keeper.component.css']
+  animations: [fundido]
 })
 export class KeeperComponent implements OnInit {
   public title;

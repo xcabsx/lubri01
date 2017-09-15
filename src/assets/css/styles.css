@@ -117,11 +117,11 @@
   margin-top: 15px;
   background: green;
   border: 5px solid black;
-  width: 200px;
+  width: 400px;
   height: 200px;
-  animation-name: rotacion ;
+  /*animation-name: rotacion ;
   animation-duration: 20s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
 }
 @keyframes deslizamiento{
   from{
@@ -163,9 +163,11 @@
   }
   50%{
     margin-left: 600px;
+    margin-top: 200px;
     transform: rotate(360deg);
   }
   100%{
+    margin-top: 0px;
     margin-left: 0px;
     transform: rotate(0deg);
   }

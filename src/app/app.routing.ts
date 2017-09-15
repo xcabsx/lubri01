@@ -20,8 +20,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keepers/keeper.component';
 import { TiendaComponent} from "./components/tienda/tienda.component";
 
-//app de futbol
-import { FutbolComponent} from './components/futbol/futbol.component';
+
 
 const appRoutes: Routes = [
   {path: '' , component: DefaultComponent},
@@ -43,11 +42,7 @@ const appRoutes: Routes = [
   {path: 'animals', component: AnimalsComponent},
   {path: 'keepers', component: KeeperComponent},
   {path: 'inicio', component: Home2Component},
-
   {path: 'tienda', component: TiendaComponent},
-  //{path: 'parques', component: ParquesComponent},
-  //{path: 'futbol', component: FutbolComponent},
-
   {path: '**' , component: LoginComponent}
 ];
 

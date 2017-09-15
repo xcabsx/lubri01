@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {fundido} from '../../modules/admin/animation';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  animations: [fundido]
 })
 export class ContactComponent implements OnInit {
   public title;

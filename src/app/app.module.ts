@@ -25,6 +25,7 @@ import { TaskDetailComponent} from './components/task.detail.component';
 import { TaskEditComponent} from './components/task.edit.component';
 import { generateDatePipe } from './pipes/generate.date.pipe';
 import { ErrorComponent} from './components/error.component';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //componentes de curso mean stack
 import { TiendaComponent} from './components/tienda/tienda.component';
@@ -38,7 +39,6 @@ import { MostrarEmailComponent} from './modules/moduloemail/components/mostrar-e
 import { MainEmailComponent} from './modules/moduloemail/components/main-email/main.email.component';
 // para probar wordpress
 import { PostListComponent } from './posts/post-list/post-list.component';
-import { FutbolComponent } from './components/futbol/futbol.component';
 import { SimpleTinyComponent } from './components/simple-tiny/simple-tiny.component';
 import { MenuSuperiorComponent } from './components/menu-superior/menu-superior.component';
 import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-superior-tareas/menu-superior-tareas.component';
@@ -66,7 +66,6 @@ import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-sup
     PostListComponent,
     ErrorComponent,
     ParquesComponent,
-    FutbolComponent,
     AnimalsComponent,
     ContactComponent,
     KeeperComponent,
@@ -81,7 +80,8 @@ import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-sup
     FormsModule,
     routing,
     ModuloemailModule,
-    AdminModule
+    AdminModule,
+    BrowserAnimationsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

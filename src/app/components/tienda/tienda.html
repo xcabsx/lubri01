@@ -1,3 +1,11 @@
+<div class="col-lg-12" [@fadein]>
+<a class="boton_activo btn btn-success" [@marcar]="estado" (click)="cambiarEstado()">
+<span *ngIf="estado=='active'">Desactivar boton</span>
+  <span *ngIf="estado=='inactivo'">activar boton</span>
+</a>
+
+<hr/>
+<h3>animaciones css3</h3>
 <a class="boton_transiciones">trancision</a>
 
 
@@ -29,3 +37,4 @@ Nombre del parque:
 <app-simple-tiny [elementId]="'descripcionTienda'"
   (onEditorKeyup)="textoRichEditor($event)">
 </app-simple-tiny>
+</div>

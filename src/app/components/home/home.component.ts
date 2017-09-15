@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { fundido} from '../../modules/admin/animation';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
-})
+  animations: [fundido] })
 export class Home2Component implements OnInit {
   public title;
 
