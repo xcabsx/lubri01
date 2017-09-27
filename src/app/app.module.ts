@@ -34,6 +34,7 @@ import { Home2Component} from "./components/home/home.component";
 import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keepers/keeper.component';
+import { Register2Component} from './components/register/register.component';
 import { GuardarEmailComponent} from './modules/moduloemail/components/guardar-email/guardar.email.component';
 import { MostrarEmailComponent} from './modules/moduloemail/components/mostrar-email/mostrar.email.component';
 import { MainEmailComponent} from './modules/moduloemail/components/main-email/main.email.component';
@@ -42,6 +43,7 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { SimpleTinyComponent } from './components/simple-tiny/simple-tiny.component';
 import { MenuSuperiorComponent } from './components/menu-superior/menu-superior.component';
 import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-superior-tareas/menu-superior-tareas.component';
+import {Login2Component} from "./components/login/login.component";
 
 
 
@@ -72,7 +74,9 @@ import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-sup
     Home2Component,
     SimpleTinyComponent,
     MenuSuperiorComponent,
-    MenuSuperiorTareasComponent
+    MenuSuperiorTareasComponent,
+    Register2Component,
+    Login2Component
   ],
   imports: [
     BrowserModule,

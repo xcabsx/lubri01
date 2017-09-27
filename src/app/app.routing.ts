@@ -14,11 +14,14 @@ import {HomeComponent} from './components/home.component';
 import { TaskNewComponent} from './components/task.new.component';
 import { TaskDetailComponent} from './components/task.detail.component';
 import { TaskEditComponent} from './components/task.edit.component';// mean stack
-import { Home2Component} from './components/home/home.component';
+import { Login2Component} from './components/login/login.component';
+import { Register2Component} from './components/register/register.component';
+
 import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keepers/keeper.component';
 import { TiendaComponent} from "./components/tienda/tienda.component";
+import {Home2Component} from "./components/home/home.component";
 
 
 
@@ -27,7 +30,7 @@ const appRoutes: Routes = [
   {path: 'index' , component: DefaultComponent},
   {path: 'index/:page' , component: DefaultComponent},
   {path: 'home' , component: HomeComponent},
-  {path: 'login' , component: LoginComponent},
+  // {path: 'login' , component: LoginComponent}, para el desarrollo con symfony
   {path: 'login/:id' , component: LoginComponent},
   {path: 'register' , component: RegisterComponent},
   {path: 'user-edit', component: UserEditComponent},
@@ -43,6 +46,9 @@ const appRoutes: Routes = [
   {path: 'keepers', component: KeeperComponent},
   {path: 'inicio', component: Home2Component},
   {path: 'tienda', component: TiendaComponent},
+  {path: 'registro', component: Register2Component},
+  {path: 'login', component: Login2Component}, //para el desarrollo con mean
+
   {path: '**' , component: LoginComponent}
 ];
 

@@ -62,10 +62,10 @@
 
       <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
         <li>
-          <a [routerLink]="['/login']" >Acceder</a>
+          <a [routerLink]="['/registro']" [routerLinkActive]="['active']" ><span class="glyphicon glyphicon-user"></span>Registro</a>
         </li>
         <li>
-          <a [routerLink]="['/register']" >Registrarse</a>
+          <a [routerLink]="['/login']" [routerLinkActive]="['active']" ><span class="glyphicon glyphicon-log-in"></span> Login</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right" *ngIf="identity">
