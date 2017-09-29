@@ -60,7 +60,7 @@
 
       </ul>
 
-      <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
+      <ul class="nav navbar-nav navbar-right" *ngIf="!identityMean">
         <li>
           <a [routerLink]="['/registro']" [routerLinkActive]="['active']" ><span class="glyphicon glyphicon-user"></span>Registro</a>
         </li>
@@ -68,19 +68,34 @@
           <a [routerLink]="['/login']" [routerLinkActive]="['active']" ><span class="glyphicon glyphicon-log-in"></span> Login</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right" *ngIf="identity">
-        <li>
-          <a [routerLink]="['/user-edit']" *ngIf="identity && identity.sub">
+      <ul class="nav navbar-nav navbar-right" *ngIf="identityMean">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            {{identityMean.name}} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+
+              <a [routerLink]="['/user-edit']"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Mis Datos</a>
+            </li>
+            <li>
+             <a class="pointer" (click)="logout()"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Salir</a>
+            </li>
+
+          </ul>
+        </li>
+        <!--<li>
+          <a [routerLink]="['/user-edit']" *ngIf="identityMean && identityMean._id">
             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
             Ajustes
           </a>
         </li>
         <li>
-          <a [routerLink]="['/login',1]" *ngIf="identity && identity.sub" >
+          <a [routerLink]="['/login',1]" *ngIf="identityMean && identityMean._id" >
             <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
             Salir
           </a>
-        </li>
+        </li>-->
       </ul>
     </div>
   </div>

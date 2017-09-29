@@ -7,7 +7,7 @@
     Error al Modificar los datos del usuario!
   </div>
 
-  <form #updateForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7 no-padding">
+  <form #updateForm="ngForm" (ngSubmit)="onSubmitMean()" class="col-md-7 no-padding">
     <p>
       <label name=""> Nombre </label>
         <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="user.name" required/>

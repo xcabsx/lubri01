@@ -176,3 +176,6 @@
     transform: rotate(0deg);
   }
 }
+.pointer{
+  cursor: pointer;
+}
