@@ -52,9 +52,10 @@ export class UserMeanService {
   }
   updateUserMean(user_to_update){
     let params = JSON.stringify(user_to_update);
-    const headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': this.getTokenMean()});
-    return this._http.post(this.url + 'update-user/' + user_to_update.id , params , {headers : headers}).map(res => res.json());
+    const headers = new Headers({'Content-Type': 'application/json',
+        'Authorization': this.getTokenMean()
+      });
+    return this._http.put(this.url + 'update-user/' + user_to_update.id , params , {headers : headers}).map(res => res.json());
 
   }
 
