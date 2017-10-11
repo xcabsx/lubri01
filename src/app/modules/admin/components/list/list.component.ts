@@ -10,7 +10,7 @@ export class ListComponent implements OnInit {
   public numbers = new Array(10);
 
   constructor() {
-    this.title = 'Lista';
+    this.title = 'Lista De Roles';
   }
 
   ngOnInit() {

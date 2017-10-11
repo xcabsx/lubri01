@@ -6,6 +6,8 @@ import { MainComponent} from './components/main/main.component';
 import { EditComponent} from './components/edit/edit.component';
 import { AddComponent} from './components/add/add.component';
 import { ListComponent} from './components/list/list.component';
+import { RolListComponent} from './components/list/rol.list.component';
+import { UserListComponent} from './components/list/user.list.component';
 
 const adminRoutes: Routes = [
   {
@@ -13,9 +15,11 @@ const adminRoutes: Routes = [
     component: MainComponent,
     children: [
       {path: '', redirectTo: 'listado', pathMatch: 'full'},
-      {path: 'listado', component: ListComponent},
-      {path: 'crear', component: AddComponent},
-      {path: 'editar', component: EditComponent}
+      {path: 'listado', component: RolListComponent},
+      {path: 'listado-usuarios', component: UserListComponent},
+      {path: 'crear', component: AddComponent}
+
+
     ]
   }];
 @NgModule({

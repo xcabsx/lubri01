@@ -68,6 +68,16 @@ export class UserService {
     const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
     return this._http.post(this.url + '/user/edit' , params , {headers : headers}).map(res => res.json());
   }
+
+  getUsers(token, pagina = null) {
+    const params = 'authorization=' + token;
+    const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
+    if (pagina == null) {
+      pagina = 1;
+    }
+
+    return this._http.post(this.url + '/user/list?page=' + pagina , params , {headers: headers}).map(res => res.json());
+  }
 }
 
 

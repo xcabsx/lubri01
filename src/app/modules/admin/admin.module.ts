@@ -9,13 +9,18 @@ import { MainComponent} from './components/main/main.component';
 import { EditComponent} from './components/edit/edit.component';
 import { AddComponent} from './components/add/add.component';
 import { ListComponent} from './components/list/list.component';
+import { RolListComponent} from './components/list/rol.list.component';
+import { UserListComponent} from './components/list/user.list.component';
+
 
 @NgModule({
   declarations: [
     MainComponent,
     ListComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    RolListComponent,
+    UserListComponent
   ],
   imports: [
     CommonModule,

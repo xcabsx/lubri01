@@ -3,13 +3,16 @@
   <div class="sidebar-admin" data-example-id="sample-nav-stacked">
     <ul class="nav nav-pills nav-stacked nav-pill-stacked-example">
       <li role="presentation" [routerLinkActive]="['active']">
-        <a [routerLink]="['listado']">Listado</a>
+        <a [routerLink]="['listado-usuarios']">Listado de Usuarios</a>
       </li>
       <li role="presentation" [routerLinkActive]="['active']">
-        <a [routerLink]="['crear']">crear</a>
+        <a [routerLink]="['listado']">Lista de Roles</a>
       </li>
       <li role="presentation" [routerLinkActive]="['active']">
-        <a [routerLink]="['informacion']">informacion</a>
+        <a [routerLink]="['crear']">Listado de Permisos</a>
+      </li>
+      <li role="presentation" [routerLinkActive]="['active']">
+        <a [routerLink]="['crear']">informacion</a>
       </li>
 
     </ul>
