@@ -17,7 +17,7 @@ export class RoleService {
     const json = JSON.stringify(rol);
     const params = 'json=' + json + '&authorization=' + token;
     const headers = new Headers({'Content-Type' : 'application/x-www-form-urlencoded'});
-    return this._http.post(this.url + '/perm/new-rol' , params , {headers: headers}).map(res => res.json());
+    return this._http.post(this.url + '/perm/newR' , params , {headers: headers}).map(res => res.json());
   }
   getRoles(token, pagina = null) {
     const params = 'authorization=' + token;

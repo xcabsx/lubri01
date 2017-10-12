@@ -5,7 +5,7 @@ import { Routes, RouterModule} from '@angular/router';
 import { LoginComponent} from './components/login.component';
 import { RegisterComponent} from './components/register.component';
 import { DefaultComponent} from './components/default.component';
-import { UserEditComponent} from './components/user.edit.component';
+// import { UserEditComponent} from './components/user.edit.component';
 import {ProductosListComponent} from './components/productos-list.component';
 import { ProductoAddComponent} from './components/productos-add.component';
 import { ProductoDetailComponent} from './components/producto-detail.component';
@@ -16,6 +16,7 @@ import { TaskDetailComponent} from './components/task.detail.component';
 import { TaskEditComponent} from './components/task.edit.component';// mean stack
 import { Login2Component} from './components/login/login.component';
 import { Register2Component} from './components/register/register.component';
+import { UserDetailComponent} from './components/user-detail/user.detail.component';
 
 import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -30,10 +31,10 @@ const appRoutes: Routes = [
   {path: 'index' , component: DefaultComponent},
   {path: 'index/:page' , component: DefaultComponent},
   {path: 'home' , component: HomeComponent},
-   {path: 'login' , component: LoginComponent},
+  {path: 'login' , component: LoginComponent},
   {path: 'login/:id' , component: LoginComponent},
   {path: 'register' , component: RegisterComponent},
-  {path: 'user-edit', component: UserEditComponent},
+ // {path: 'user-edit', component: UserEditComponent},
   {path: 'productos', component: ProductosListComponent},
   {path: 'productos-add', component: ProductoAddComponent},
   {path: 'producto/:id', component: ProductoDetailComponent},
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   {path: 'new-task', component: TaskNewComponent},
   {path: 'task/:id', component: TaskDetailComponent},
   {path: 'task-edit/:id', component: TaskEditComponent},
+
   {path: 'contacto', component: ContactComponent},
   {path: 'animals', component: AnimalsComponent},
   {path: 'keepers', component: KeeperComponent},

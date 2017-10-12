@@ -2,6 +2,7 @@
 <h3>
   {{title}}
 </h3>
+  <a [routerLink]="['../user-edit',1]">informacion</a>
   <table class="table table-hover">
     <thead class="thead-default">
     <tr>
@@ -19,7 +20,8 @@
           <span class="glyphicon glyphicon-eye-open"></span>
           Ver Detalle
         </button>
-        <button class="btn btn-sm btn-primary">
+
+        <button class="btn btn-sm btn-primary" [routerLink]="['/admin-panel/user-edit',user.id]">
           <span class="glyphicon glyphicon-pencil"></span>
           Editar
         </button>

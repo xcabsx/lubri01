@@ -39,11 +39,11 @@ import { GuardarEmailComponent} from './modules/moduloemail/components/guardar-e
 import { MostrarEmailComponent} from './modules/moduloemail/components/mostrar-email/mostrar.email.component';
 import { MainEmailComponent} from './modules/moduloemail/components/main-email/main.email.component';
 // para probar wordpress
-import { PostListComponent } from './posts/post-list/post-list.component';
 import { SimpleTinyComponent } from './components/simple-tiny/simple-tiny.component';
 import { MenuSuperiorComponent } from './components/menu-superior/menu-superior.component';
 import { MenuSuperiorTareasComponent } from './components/menu-superior/menu-superior-tareas/menu-superior-tareas.component';
 import {Login2Component} from "./components/login/login.component";
+import { UserDetailComponent} from './components/user-detail/user.detail.component';
 
 
 
@@ -54,7 +54,7 @@ import {Login2Component} from "./components/login/login.component";
     LoginComponent,
     RegisterComponent,
     DefaultComponent,
-    UserEditComponent,
+   // UserEditComponent,
     ProductoEditComponent,
     ProductoAddComponent,
     ProductosListComponent,
@@ -65,7 +65,7 @@ import {Login2Component} from "./components/login/login.component";
     TaskEditComponent,
     generateDatePipe,
     TiendaComponent,
-    PostListComponent,
+   UserDetailComponent,
     ErrorComponent,
     ParquesComponent,
     AnimalsComponent,

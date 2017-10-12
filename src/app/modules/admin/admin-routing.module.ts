@@ -8,20 +8,28 @@ import { AddComponent} from './components/add/add.component';
 import { ListComponent} from './components/list/list.component';
 import { RolListComponent} from './components/list/rol.list.component';
 import { UserListComponent} from './components/list/user.list.component';
-
+import { UserEdit1Component} from './components/edit/user/user.editar.component';
+import { UserAddComponent} from './components/add/user.add.component';
+import { RolAddComponent} from './components/add/rol.add.component';
 const adminRoutes: Routes = [
   {
     path: 'admin-panel',
     component: MainComponent,
-    children: [
-      {path: '', redirectTo: 'listado', pathMatch: 'full'},
+     children: [
+      {path: '', redirectTo: 'admin-panel', pathMatch: 'full'},
       {path: 'listado', component: RolListComponent},
       {path: 'listado-usuarios', component: UserListComponent},
-      {path: 'crear', component: AddComponent}
+      {path: 'crear', component: AddComponent},
+       {path: 'crear-usuario', component: UserAddComponent},
+       {path: 'crear-rol', component: RolAddComponent},
+      {path: 'user-edit/:id', component: UserEdit1Component },
+      {path: '**', component: RolListComponent },
 
 
-    ]
-  }];
+     ]
+  }
+
+  ];
 @NgModule({
   imports: [
     RouterModule.forChild(adminRoutes)

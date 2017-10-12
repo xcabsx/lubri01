@@ -11,6 +11,9 @@ import { AddComponent} from './components/add/add.component';
 import { ListComponent} from './components/list/list.component';
 import { RolListComponent} from './components/list/rol.list.component';
 import { UserListComponent} from './components/list/user.list.component';
+import { UserEdit1Component} from './components/edit/user/user.editar.component';
+import { UserAddComponent} from './components/add/user.add.component';
+import { RolAddComponent} from './components/add/rol.add.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { UserListComponent} from './components/list/user.list.component';
     AddComponent,
     EditComponent,
     RolListComponent,
-    UserListComponent
+    UserListComponent,
+    UserEdit1Component,
+    UserAddComponent,
+    RolAddComponent
   ],
   imports: [
     CommonModule,
