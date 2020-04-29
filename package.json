@@ -23,7 +23,7 @@
     "@angular/router": "^4.4.4",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.1",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "rxjs": "^5.4.2",
     "tinymce": "^4.7.1",
     "zone.js": "^0.8.18"
